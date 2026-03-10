@@ -1,0 +1,691 @@
+/* Custom CSS for Thibaut's Portfolio
+---------------------------------------------------------------------- */
+
+/* Skill Bars
+---------------------------------------------------------------------- */
+.bars {
+   width: 95%;
+   max-width: 750px;
+   margin: 0 auto;
+}
+
+.bars .skills {
+   margin-top: 36px;
+   list-style: none;
+}
+
+.bars li {
+   position: relative;
+   margin-bottom: 48px;
+   background: #333;
+   height: 42px;
+   border-radius: 3px;
+}
+
+.bars li em {
+   font: 16px/30px 'opensans-regular', sans-serif;
+   color: #525252;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-weight: normal;
+   position: relative;
+   top: -36px;
+}
+
+.bar-expand {
+   position: absolute;
+   left: 0;
+   top: 0;
+   margin: 0;
+   padding-right: 24px;
+   background: #11ABB0;
+   display: inline-block;
+   height: 42px;
+   line-height: 42px;
+   border-radius: 3px 0 0 3px;
+   -webkit-animation: width 2s ease;
+   -moz-animation: width 2s ease;
+   -o-animation: width 2s ease;
+   animation: width 2s ease;
+}
+
+/* Skill percentages */
+.c-lang {
+   width: 90%;
+}
+.java {
+   width: 80%;
+}
+.html5 {
+   width: 80%;
+}
+.php {
+   width: 80%;
+}
+.cplusplus {
+   width: 75%;
+}
+.shell {
+   width: 70%;
+}
+.kotlin {
+   width: 70%;
+}
+.csharp {
+   width: 65%;
+}
+.python {
+   width: 60%;
+}
+.sql {
+   width: 85%;
+}
+
+/* Animation keyframes */
+@-webkit-keyframes width {
+   0% { width: 0; }
+}
+@-moz-keyframes width {
+   0% { width: 0; }
+}
+@-o-keyframes width {
+   0% { width: 0; }
+}
+@keyframes width {
+   0% { width: 0; }
+}
+
+/* Custom Header Background */
+header {
+   background: #0f0f0f url(../images/header-background.jpg) no-repeat top center;
+   background-size: cover !important;
+   -webkit-background-size: cover !important;
+   background-attachment: fixed;
+   position: relative;
+   min-height: 720px;
+   width: 100%;
+}
+
+/* Profile Picture adjustments */
+#about .profile-pic {
+   position: relative;
+   width: 200px;
+   height: 200px;
+   border-radius: 100%;
+   border: 8px solid #2B2B2B;
+   box-shadow: 0 1px 4px rgba(0, 0, 0, .8);
+   object-fit: cover;
+   margin-bottom: 18px;
+}
+
+/* Portfolio section headings */
+#portfolio h1 {
+   font: 20px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   text-align: center;
+   margin-bottom: 12px;
+   color: #fff;
+}
+
+#portfolio .lead {
+   font: 16px/30px 'opensans-light', sans-serif;
+   color: #A1A1A1;
+   text-align: center;
+   margin-bottom: 36px;
+}
+
+#portfolio .row + .row {
+   margin-top: 48px;
+}
+
+/* Project Cards
+---------------------------------------------------------------------- */
+.project-cards {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 30px;
+   justify-content: center;
+}
+
+.project-card {
+   background: #fff;
+   border-radius: 6px;
+   overflow: hidden;
+   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+   width: 320px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+   transform: translateY(-6px);
+   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.project-card-img {
+   width: 100%;
+   height: 200px;
+   overflow: hidden;
+}
+
+.project-card-img img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-card-img img {
+   transform: scale(1.05);
+}
+
+.project-card-body {
+   padding: 20px 24px 24px;
+}
+
+.project-card-body h3 {
+   font: 17px/24px 'opensans-bold', sans-serif;
+   color: #313131;
+   margin-bottom: 10px;
+}
+
+.project-card-body p {
+   font: 14px/22px 'opensans-regular', sans-serif;
+   color: #636363;
+   margin-bottom: 14px;
+}
+
+.project-tags {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 6px;
+   margin-bottom: 16px;
+}
+
+.project-tags span {
+   font: 11px/16px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 0.5px;
+   background: #11ABB0;
+   color: #fff;
+   padding: 3px 10px;
+   border-radius: 3px;
+}
+
+.project-link {
+   font: 13px/18px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   color: #11ABB0;
+   text-decoration: none;
+   transition: color 0.3s ease;
+}
+
+.project-link:hover {
+   color: #F06000;
+}
+
+.project-link i {
+   margin-left: 4px;
+   font-size: 11px;
+}
+
+/* Modal Popup Override
+---------------------------------------------------------------------- */
+.mfp-wrap {
+   overflow-y: auto;
+}
+
+body.mfp-open {
+   overflow: hidden !important;
+}
+
+.popup-modal {
+   max-width: 90vw !important;
+   width: 90vw;
+   max-height: 75vh;
+   overflow: hidden;
+   background: #fff;
+   border-radius: 8px;
+}
+
+.modal-content {
+   display: flex;
+}
+
+.modal-img {
+   flex: 0 0 40%;
+   background: #111;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 24px;
+}
+
+.modal-img img {
+   width: 100%;
+   border-radius: 4px;
+}
+
+.modal-img-secondary {
+   margin-top: 16px;
+   max-width: 60% !important;
+   opacity: 0.9;
+}
+
+.modal-info {
+   flex: 1;
+   padding: 32px 36px;
+}
+
+.modal-info h2 {
+   font: 24px/30px 'opensans-bold', sans-serif;
+   color: #313131;
+   margin-bottom: 12px;
+}
+
+.modal-meta {
+   display: flex;
+   gap: 12px;
+   margin-bottom: 20px;
+}
+
+.modal-meta span {
+   font: 12px/18px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   padding: 4px 12px;
+   border-radius: 3px;
+}
+
+.modal-type {
+   background: #11ABB0;
+   color: #fff;
+}
+
+.modal-duration {
+   background: #eee;
+   color: #636363;
+}
+
+.modal-description p {
+   font: 15px/26px 'opensans-regular', sans-serif !important;
+   color: #636363 !important;
+   margin-bottom: 16px !important;
+}
+
+.modal-description h4 {
+   font: 14px/20px 'opensans-bold', sans-serif !important;
+   color: #11ABB0 !important;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   margin-bottom: 10px !important;
+   margin-top: 20px;
+}
+
+.modal-description ul {
+   list-style: none;
+   padding: 0;
+   margin: 0 0 16px;
+}
+
+.modal-description ul li {
+   font: 14px/24px 'opensans-regular', sans-serif;
+   color: #636363;
+   padding-left: 20px;
+   position: relative;
+   margin-bottom: 4px;
+}
+
+.modal-description ul li::before {
+   content: '';
+   position: absolute;
+   left: 0;
+   top: 10px;
+   width: 8px;
+   height: 8px;
+   background: #11ABB0;
+   border-radius: 50%;
+}
+
+.modal-tags {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 6px;
+   margin-top: 20px;
+   margin-bottom: 16px;
+}
+
+.modal-tags span {
+   font: 11px/16px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 0.5px;
+   background: #11ABB0;
+   color: #fff;
+   padding: 4px 10px;
+   border-radius: 3px;
+}
+
+.modal-links {
+   margin-top: 12px;
+}
+
+.modal-links a {
+   font: 13px/20px 'opensans-bold', sans-serif;
+   color: #11ABB0;
+   text-decoration: none;
+   transition: color 0.3s ease;
+}
+
+.modal-links a:hover {
+   color: #F06000;
+}
+
+.modal-links a i {
+   margin-right: 6px;
+}
+
+.popup-modal .link-box {
+   padding: 16px 36px !important;
+   background: #1a1a1a;
+   text-align: right;
+   border-radius: 0 0 8px 8px;
+}
+
+.popup-modal .link-box a {
+   color: #fff;
+   font: 12px/20px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   cursor: pointer;
+   transition: color 0.3s ease;
+}
+
+.popup-modal .link-box a:hover {
+   color: #11ABB0;
+}
+
+/* French Navigation adjustments */
+#nav {
+   font: 14px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1.5px;
+}
+
+/* Contact Form styling */
+#contact input,
+#contact textarea {
+   padding: 18px 20px;
+   color: #eee;
+   background: #373233;
+   margin-bottom: 18px;
+   border: 0;
+   outline: none;
+   font-size: 15px;
+   line-height: 24px;
+   width: 100%;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+   color: #fff;
+   background-color: #11ABB0;
+}
+
+#contact button.submit {
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   color: #fff;
+   background: #11ABB0;
+   border: none;
+   cursor: pointer;
+   height: auto;
+   display: inline-block;
+   border-radius: 3px;
+   padding: 16px 30px;
+   font-size: 14px;
+   line-height: 30px;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+
+#contact button.submit:hover {
+   background: #F06000;
+}
+
+/* Timeline
+---------------------------------------------------------------------- */
+.timeline-title {
+   font: 24px/24px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   text-align: center;
+   margin-bottom: 48px;
+   color: #313131;
+}
+
+.timeline-title span {
+   border-bottom: 3px solid #11ABB0;
+   padding-bottom: 6px;
+}
+
+.timeline {
+   position: relative;
+   max-width: 900px;
+   margin: 0 auto;
+   padding: 12px 0 24px;
+}
+
+/* Vertical line */
+.timeline::before {
+   content: '';
+   position: absolute;
+   left: 50%;
+   top: 0;
+   bottom: 0;
+   width: 3px;
+   background: #11ABB0;
+   transform: translateX(-50%);
+}
+
+.timeline-item {
+   position: relative;
+   width: 50%;
+   padding: 0 40px 48px;
+   box-sizing: border-box;
+}
+
+.timeline-left {
+   left: 0;
+   text-align: right;
+}
+
+.timeline-right {
+   left: 50%;
+   text-align: left;
+}
+
+/* Circle on the line */
+.timeline-badge {
+   position: absolute;
+   top: 6px;
+   width: 18px;
+   height: 18px;
+   border-radius: 50%;
+   border: 3px solid #11ABB0;
+   z-index: 1;
+}
+
+.timeline-badge.formation {
+   background: #11ABB0;
+}
+
+.timeline-badge.experience {
+   background: #F06000;
+   border-color: #F06000;
+}
+
+.timeline-left .timeline-badge {
+   right: -9px;
+}
+
+.timeline-right .timeline-badge {
+   left: -9px;
+}
+
+/* Content panel */
+.timeline-panel {
+   background: #fff;
+   border-radius: 4px;
+   padding: 20px 24px;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+   position: relative;
+}
+
+.timeline-panel::after {
+   content: '';
+   position: absolute;
+   top: 12px;
+   width: 0;
+   height: 0;
+   border: 8px solid transparent;
+}
+
+.timeline-left .timeline-panel::after {
+   right: -16px;
+   border-left-color: #fff;
+}
+
+.timeline-right .timeline-panel::after {
+   left: -16px;
+   border-right-color: #fff;
+}
+
+.timeline-heading {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 8px;
+}
+
+.timeline-left .timeline-heading {
+   flex-direction: row-reverse;
+}
+
+.timeline-date {
+   font: 13px/18px 'opensans-bold', sans-serif;
+   color: #11ABB0;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+
+.timeline-label {
+   font: 11px/16px 'opensans-bold', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   padding: 2px 8px;
+   border-radius: 3px;
+   color: #fff;
+}
+
+.label-formation {
+   background: #11ABB0;
+}
+
+.label-experience {
+   background: #F06000;
+}
+
+.timeline-panel h3 {
+   font: 18px/24px 'opensans-bold', sans-serif;
+   color: #313131;
+   margin-bottom: 4px;
+}
+
+.timeline-panel h4 {
+   font: 14px/20px 'opensans-regular', sans-serif;
+   color: #888;
+   margin-bottom: 8px;
+}
+
+.timeline-panel p {
+   font: 14px/22px 'opensans-regular', sans-serif;
+   color: #636363;
+   margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 767px) {
+   .bars {
+      width: 100%;
+   }
+
+   .bars li em {
+      font-size: 14px;
+      line-height: 28px;
+      top: -30px;
+   }
+
+   /* Modal mobile */
+   .modal-content {
+      flex-direction: column;
+   }
+
+   .modal-img {
+      flex: none;
+      padding: 16px;
+   }
+
+   .modal-info {
+      padding: 20px;
+   }
+
+   .modal-info h2 {
+      font-size: 20px;
+      line-height: 26px;
+   }
+
+   /* Project cards mobile */
+   .project-cards {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .project-card {
+      width: 100%;
+      max-width: 400px;
+   }
+
+   /* Timeline mobile: single column */
+   .timeline::before {
+      left: 20px;
+   }
+
+   .timeline-item {
+      width: 100%;
+      left: 0 !important;
+      text-align: left !important;
+      padding-left: 52px;
+      padding-right: 16px;
+   }
+
+   .timeline-left .timeline-badge,
+   .timeline-right .timeline-badge {
+      left: 11px;
+      right: auto;
+   }
+
+   .timeline-left .timeline-panel::after {
+      right: auto;
+      left: -16px;
+      border-left-color: transparent;
+      border-right-color: #fff;
+   }
+
+   .timeline-left .timeline-heading {
+      flex-direction: row;
+   }
+}
